@@ -4,7 +4,6 @@ import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.crud.dto.CrudDto;
 import com.crud.model.Users;
 
 public interface CrudRepository extends JpaRepository<Users, Long> {
@@ -22,7 +21,5 @@ public interface CrudRepository extends JpaRepository<Users, Long> {
 	Optional<Users> findByContact(Long contact);
 
 	Optional<Users> findByUserName(String userName);
-
-
 
 }

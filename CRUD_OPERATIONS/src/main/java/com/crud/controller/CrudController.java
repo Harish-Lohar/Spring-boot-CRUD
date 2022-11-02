@@ -23,11 +23,11 @@ public class CrudController {
 	@Autowired
 	private CrudService crudService;
 
-	// Insert User Data 
+	// Insert User Data
 	@PostMapping("/saveuser")
 	public ResponseEntity<String> save(@RequestBody CrudDto crudDto) {
 
-		return crudService.saveUser(crudDto);
+		return crudService.saveUser(crudDto);  
 
 	}
 
@@ -65,11 +65,10 @@ public class CrudController {
 		return crudService.updateUser(userId, crudDto);
 
 	}
-	
+
 	@DeleteMapping("/delete/{userId}")
-	public  ResponseEntity<String> deleteUser(@PathVariable("userId") Long userId)
-	{
+	public ResponseEntity<String> deleteUser(@PathVariable("userId") Long userId) {
 		return crudService.deleteUser(userId);
 	}
-	
+
 }

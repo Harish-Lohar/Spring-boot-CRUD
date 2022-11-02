@@ -89,13 +89,14 @@ public class ServiceImplementation implements CrudService {
 		return Optional.ofNullable(crudRepository.findByFirstName(firstName));
 	}
 
+	// Data Get By Lastname
 	@Override
 	public Optional<Users> getByLastName(String lastName) {
 
 		return Optional.ofNullable(crudRepository.findByLastName(lastName));
 	}
-	// Data Get By User id
 
+	// Data Get By User id
 	@Override
 	public Optional<Users> getByUserId(Long userId) {
 
@@ -126,6 +127,5 @@ public class ServiceImplementation implements CrudService {
 		crudRepository.deleteById(userId);
 		return new ResponseEntity<>("User Data Deleted Successfully... ", HttpStatus.OK);
 	}
-
 
 }
