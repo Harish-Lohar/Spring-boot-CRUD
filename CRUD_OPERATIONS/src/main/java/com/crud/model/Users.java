@@ -20,6 +20,8 @@ public class Users {
 	private String password;
 	private String email;
 	private String dob;
+	private String createdOn;
+	private String updatedOn;
 
 	public Long getUserId() {
 		return userId;
@@ -53,12 +55,12 @@ public class Users {
 		this.lastName = lastName;
 	}
 
-	public String getUsername() {
+	public String getUserName() {
 		return userName;
 	}
 
-	public void setUsername(String username) {
-		this.userName = username;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getPassword() {
@@ -83,6 +85,22 @@ public class Users {
 
 	public void setDob(String dob) {
 		this.dob = dob;
+	}
+
+	public String getCreatedOn() {
+		return createdOn;
+	}
+
+	public void setCreatedOn(String createdOn) {
+		this.createdOn = createdOn;
+	}
+
+	public String getUpdatedOn() {
+		return updatedOn;
+	}
+
+	public void setUpdatedOn(String updatedOn) {
+		this.updatedOn = updatedOn;
 	}
 
 }

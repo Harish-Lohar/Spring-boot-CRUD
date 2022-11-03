@@ -43,7 +43,7 @@ public class ServiceImplementation implements CrudService {
 		Optional<Users> username = crudRepository.findByUserName(crudDto.getUserName());
 		if (!username.isPresent()) {
 
-			users.setUsername(crudDto.getUserName());
+			users.setUserName(crudDto.getUserName());
 		} else {
 			return new ResponseEntity<>("Username Not Available...", HttpStatus.OK);
 		}
@@ -66,6 +66,8 @@ public class ServiceImplementation implements CrudService {
 			users.setDob(crudDto.getDob());
 			users.setContact(crudDto.getContact());
 			users.setPassword(crudDto.getPassword());
+			users.setCreatedOn(crudDto.getCreatedOn());
+			users.setUpdatedOn(crudDto.getUpdatedOn());
 			crudRepository.save(users);
 			return new ResponseEntity<>("User Registered Successfully...", HttpStatus.OK);
 		} else {
@@ -113,6 +115,7 @@ public class ServiceImplementation implements CrudService {
 			users.setFirstName(crudDto.getFirstName());
 			users.setLastName(crudDto.getLastName());
 			users.setDob(crudDto.getDob());
+			users.setUpdatedOn(crudDto.getUpdatedOn());
 			crudRepository.save(users);
 			msg = new ResponseEntity<>("User Data Updated Successfully... ", HttpStatus.OK);
 		} else {
