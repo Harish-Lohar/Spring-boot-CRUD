@@ -33,9 +33,9 @@ public class CrudController {
 
 	// Get all User Data
 	@GetMapping("/users")
-	public List<Users> allUsers(@RequestBody Users users) {
+	public List<Users> allUsers() {
 
-		return crudService.getData(users);
+		return crudService.getData();
 	}
 
 	// Get user Data By using Firstname

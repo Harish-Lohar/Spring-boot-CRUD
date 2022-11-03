@@ -77,7 +77,7 @@ public class ServiceImplementation implements CrudService {
 
 	// All Users Data Get
 	@Override
-	public List<Users> getData(Users users) {
+	public List<Users> getData() {
 		List<Users> list = crudRepository.findAll();
 		return list;
 	}

@@ -12,7 +12,7 @@ public interface CrudService {
 
 	ResponseEntity<String> saveUser(CrudDto crudDto);
 
-	List<Users> getData(Users users);
+	List<Users> getData();
 
 	Optional<Users> getByFirstName(String firstName);
 
